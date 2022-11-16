@@ -1,0 +1,15 @@
+D:\Projects\C#\matriks\bin\Debug\net6.0\matriks.exe
+D:\Projects\C#\matriks\bin\Debug\net6.0\matriks.deps.json
+D:\Projects\C#\matriks\bin\Debug\net6.0\matriks.runtimeconfig.json
+D:\Projects\C#\matriks\bin\Debug\net6.0\matriks.dll
+D:\Projects\C#\matriks\bin\Debug\net6.0\matriks.pdb
+D:\Projects\C#\matriks\obj\Debug\net6.0\matriks.csproj.AssemblyReference.cache
+D:\Projects\C#\matriks\obj\Debug\net6.0\matriks.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\C#\matriks\obj\Debug\net6.0\matriks.AssemblyInfoInputs.cache
+D:\Projects\C#\matriks\obj\Debug\net6.0\matriks.AssemblyInfo.cs
+D:\Projects\C#\matriks\obj\Debug\net6.0\matriks.csproj.CoreCompileInputs.cache
+D:\Projects\C#\matriks\obj\Debug\net6.0\matriks.dll
+D:\Projects\C#\matriks\obj\Debug\net6.0\refint\matriks.dll
+D:\Projects\C#\matriks\obj\Debug\net6.0\matriks.pdb
+D:\Projects\C#\matriks\obj\Debug\net6.0\matriks.genruntimeconfig.cache
+D:\Projects\C#\matriks\obj\Debug\net6.0\ref\matriks.dll
