@@ -8,14 +8,14 @@ namespace matriks
     public class Matrix
     {
         public int x,y;
-        public int [,] value;
+        public double [,] value;
 
         public Matrix(int x, int y){
             this.x = x;
             this.y = y;
-            this.value = new int[x,y];
+            this.value = new double[x,y];
         }
-        public Matrix(int x, int y, int[,] value){
+        public Matrix(int x, int y, double[,] value){
             this.x = x;
             this.y = y;
             this.value = value;
@@ -69,7 +69,7 @@ namespace matriks
                     "Gagal! Dimensi tidak cocok");
             }
         }
-        public Matrix kaliKoefisien(int n){
+        public Matrix kaliKoefisien(double n){
             Matrix hasil = new Matrix(x,y);
             for (int i = 0; i < x; i++) {
                 for (int j =0; j < y; j++){
@@ -110,9 +110,9 @@ namespace matriks
     
             return hasil;
         }
-        public int detMinor(int a, int b){
+        public double detMinor(int a, int b){
             Matrix temp = minorMatrix(a,b);
-            int hasil = temp.determinan();
+            double hasil = temp.determinan();
             return hasil;
 
         }
@@ -142,17 +142,17 @@ namespace matriks
 
         public Matrix invers(){
             Matrix hasil = adjoin();
-            int det = determinan();
+            double det = determinan();
 
             return hasil.kaliKoefisien(1/det);;
         }
-        public int determinan(){
+        public double determinan(){
             if(x==2 && y==2){
-                int hasil = (value[0,0] * value[1,1]) - (value[0,1]*value[1,0]) ; 
+                double hasil = (value[0,0] * value[1,1]) - (value[0,1]*value[1,0]) ; 
                 return hasil;
             }
             else if(x==3 && y==3){
-                int hasil =0;
+                double hasil =0;
                 hasil = ((value[0,0] * value[1,1] * value[2,2]) + 
                         (value[0,1] * value[1,2] * value[2,0]) +
                         (value[0,2] * value[1,0] * value[2,1])) - 
@@ -163,7 +163,7 @@ namespace matriks
                 return hasil;
             }
             else if(x==4 && y==4){
-                int hasil;
+                double hasil;
                 hasil = (value[0,0] * detMinor(1,1)) -
                         (value[0,1] * detMinor(1,2)) +
                         (value[0,2] * detMinor(1,3)) -
