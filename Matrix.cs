@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace matriks
 {
     public class Matrix
@@ -25,7 +20,7 @@ namespace matriks
         {
             for (int i = 0; i < x; i++) {
                 for (int j =0; j < y; j++){
-                    Console.Write(value[i,j]+" ");
+                    Console.Write(value[i,j]+"\t");
                 }
                 Console.Write("\n");
             }
@@ -153,13 +148,10 @@ namespace matriks
             }
             else if(x==3 && y==3){
                 double hasil =0;
-                hasil = ((value[0,0] * value[1,1] * value[2,2]) + 
-                        (value[0,1] * value[1,2] * value[2,0]) +
-                        (value[0,2] * value[1,0] * value[2,1])) - 
-                        ((value[2,0] * value[1,1] * value[0,2]) +
-                        (value[2,1] * value[1,2] * value[0,0]) +
-                        (value[2,2] * value[1,0] * value[0,1]))
-                ;
+                hasil = (value[0,0] * detMinor(1,1)) -
+                        (value[0,1] * detMinor(1,2)) +
+                        (value[0,2] * detMinor(1,3))
+                        ;
                 return hasil;
             }
             else if(x==4 && y==4){
@@ -168,6 +160,17 @@ namespace matriks
                         (value[0,1] * detMinor(1,2)) +
                         (value[0,2] * detMinor(1,3)) -
                         (value[0,3] * detMinor(1,4));
+
+                return hasil;
+                
+            }
+            else if(x==5 && y==5){
+                double hasil;
+                hasil = (value[0,0] * detMinor(1,1)) -
+                        (value[0,1] * detMinor(1,2)) +
+                        (value[0,2] * detMinor(1,3)) -
+                        (value[0,3] * detMinor(1,4)) +
+                        (value[0,4] * detMinor(1,5));
 
                 return hasil;
                 
